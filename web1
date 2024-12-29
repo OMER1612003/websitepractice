@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop Website Design - Web Practice</title>
+    <link href="./resources/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Pangolin&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section id="banner">
+        <img src="./resources/images/Barber_Shop_img/logo.png" alt="logo" class="logo">
+        <div class="banner-txt">
+            <h1>Hair Studio</h1>
+            <p>Style hair, style life</p>
+            <div class="banner-button">
+                <a href="#"><span></span>Find out!</a>
+                <a href="#"><span></span>Read</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">MEET US</a></li>
+                <li><a href="#">TESTIMONIALS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="resources/images/Barber_Shop_img/menu.png" id="menu">
+    </div>
+
+<script>
+let menuBtn = document.getElementById("menuBtn");
+let sideNav = document.getElementById("sideNav");
+let menu = document.getElementById("menu");
+sideNav.style.right = "-250px";
+
+menuBtn.onclick = function () {
+    if (sideNav.style.right == "-250px") {
+        sideNav.style.right = "0";
+        menu.src = "resources/images/Barber_Shop_img/open_menu.png"; // Update image
+    } else {
+        sideNav.style.right = "-250px";
+        menu.src = "resources/images/Barber_Shop_img/menu.png"; // Revert to original image
+    }
+
+};
+</script> 
+</body>
+</html>
